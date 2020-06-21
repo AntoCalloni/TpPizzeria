@@ -59,6 +59,7 @@
             this.MenuPizzas.TabIndex = 1;
             this.MenuPizzas.Text = "Menú Pizzas";
             this.MenuPizzas.UseVisualStyleBackColor = false;
+            this.MenuPizzas.Click += new System.EventHandler(this.MenuPizzas_Click);
             // 
             // MenuEmpanadas
             // 
@@ -70,6 +71,7 @@
             this.MenuEmpanadas.TabIndex = 2;
             this.MenuEmpanadas.Text = "Menú Empanadas";
             this.MenuEmpanadas.UseVisualStyleBackColor = false;
+            this.MenuEmpanadas.Click += new System.EventHandler(this.MenuEmpanadas_Click);
             // 
             // RevisarStock
             // 
@@ -81,6 +83,7 @@
             this.RevisarStock.TabIndex = 3;
             this.RevisarStock.Text = "Revisar Stock";
             this.RevisarStock.UseVisualStyleBackColor = false;
+            this.RevisarStock.Click += new System.EventHandler(this.RevisarStock_Click);
             // 
             // VerPedidos
             // 
@@ -92,6 +95,7 @@
             this.VerPedidos.TabIndex = 4;
             this.VerPedidos.Text = "Ver Pedidos";
             this.VerPedidos.UseVisualStyleBackColor = false;
+            this.VerPedidos.Click += new System.EventHandler(this.VerPedidos_Click);
             // 
             // Salir
             // 

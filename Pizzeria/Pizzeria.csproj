@@ -49,6 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockMP.Designer.cs">
+      <DependentUpon>StockMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEmpanadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuEmpanadas.Designer.cs">
+      <DependentUpon>MenuEmpanadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPizzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPizzas.Designer.cs">
+      <DependentUpon>MenuPizzas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +84,15 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuEmpanadas.resx">
+      <DependentUpon>MenuEmpanadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPizzas.resx">
+      <DependentUpon>MenuPizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,6 +103,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StockMP.resx">
+      <DependentUpon>StockMP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
