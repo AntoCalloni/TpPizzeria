@@ -52,6 +52,7 @@
             this.Name = "MenuEmpanadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Empanadas";
+            this.Load += new System.EventHandler(this.MenuEmpanadas_Load);
             this.ResumeLayout(false);
 
         }

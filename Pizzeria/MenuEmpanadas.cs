@@ -21,5 +21,10 @@ namespace Pizzeria
         {
             this.Close();
         }
+
+        private void MenuEmpanadas_Load(object sender, EventArgs e)
+        {
+            ConexionBBDD.MostrarDatos();
+        }
     }
 }
