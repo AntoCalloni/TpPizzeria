@@ -22,7 +22,7 @@ namespace Pizzeria
             this.Close();
         }
 
-        private void MenuEmpanadas_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ConexionBBDD.MostrarDatos();
         }

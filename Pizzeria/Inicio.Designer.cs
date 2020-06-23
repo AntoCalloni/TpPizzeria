@@ -111,7 +111,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pizzeria.Properties.Resources.pizza_sabrosa_redonda_colorida_1284_10219;
+            this.pictureBox1.Image = global::Pizzeria.Properties.Resources.icnon;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(227, 104);

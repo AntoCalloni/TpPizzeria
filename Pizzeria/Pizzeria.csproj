@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>pizza-sabrosa-redonda-colorida_1284-10219 %281%29.ico</ApplicationIcon>
+    <ApplicationIcon>icnon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -121,7 +121,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icnon.ico" />
     <Content Include="pizza-sabrosa-redonda-colorida_1284-10219 %281%29.ico" />
+    <None Include="Resources\icnon.png" />
+    <None Include="Resources\icono.bmp" />
     <None Include="Resources\pizza-sabrosa-redonda-colorida_1284-10219.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

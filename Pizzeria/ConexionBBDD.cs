@@ -20,7 +20,7 @@ namespace Pizzeria
         {
             try
             {
-                cnn = new SqlConnection("Data Source =DESKTOP-AOA3QAV; Initial Catalog =TpPizzeria; Integrated Security = True");
+                cnn = new SqlConnection("Data Source =DESKTOP-AOA3QAV; Initial Catalog =a; Integrated Security = True");
             }
             catch (Exception error)
             {

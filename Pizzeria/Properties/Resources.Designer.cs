@@ -63,6 +63,16 @@ namespace Pizzeria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icnon {
+            get {
+                object obj = ResourceManager.GetObject("icnon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pizza_sabrosa_redonda_colorida_1284_10219 {
             get {
                 object obj = ResourceManager.GetObject("pizza_sabrosa_redonda_colorida_1284_10219", resourceCulture);
