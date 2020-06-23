@@ -55,7 +55,7 @@
             this.MenuPizzas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuPizzas.Location = new System.Drawing.Point(176, 122);
             this.MenuPizzas.Name = "MenuPizzas";
-            this.MenuPizzas.Size = new System.Drawing.Size(162, 74);
+            this.MenuPizzas.Size = new System.Drawing.Size(162, 76);
             this.MenuPizzas.TabIndex = 1;
             this.MenuPizzas.Text = "Menú Pizzas";
             this.MenuPizzas.UseVisualStyleBackColor = false;
@@ -65,7 +65,7 @@
             // 
             this.MenuEmpanadas.BackColor = System.Drawing.SystemColors.Highlight;
             this.MenuEmpanadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuEmpanadas.Location = new System.Drawing.Point(176, 224);
+            this.MenuEmpanadas.Location = new System.Drawing.Point(176, 257);
             this.MenuEmpanadas.Name = "MenuEmpanadas";
             this.MenuEmpanadas.Size = new System.Drawing.Size(162, 76);
             this.MenuEmpanadas.TabIndex = 2;
@@ -77,9 +77,9 @@
             // 
             this.RevisarStock.BackColor = System.Drawing.SystemColors.Highlight;
             this.RevisarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RevisarStock.Location = new System.Drawing.Point(395, 122);
+            this.RevisarStock.Location = new System.Drawing.Point(417, 122);
             this.RevisarStock.Name = "RevisarStock";
-            this.RevisarStock.Size = new System.Drawing.Size(142, 74);
+            this.RevisarStock.Size = new System.Drawing.Size(162, 76);
             this.RevisarStock.TabIndex = 3;
             this.RevisarStock.Text = "Revisar Stock";
             this.RevisarStock.UseVisualStyleBackColor = false;
@@ -89,9 +89,9 @@
             // 
             this.VerPedidos.BackColor = System.Drawing.SystemColors.Highlight;
             this.VerPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerPedidos.Location = new System.Drawing.Point(400, 224);
+            this.VerPedidos.Location = new System.Drawing.Point(422, 255);
             this.VerPedidos.Name = "VerPedidos";
-            this.VerPedidos.Size = new System.Drawing.Size(137, 81);
+            this.VerPedidos.Size = new System.Drawing.Size(162, 76);
             this.VerPedidos.TabIndex = 4;
             this.VerPedidos.Text = "Ver Pedidos";
             this.VerPedidos.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             // 
             this.Salir.BackColor = System.Drawing.SystemColors.Highlight;
             this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salir.Location = new System.Drawing.Point(606, 397);
+            this.Salir.Location = new System.Drawing.Point(670, 407);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(122, 42);
             this.Salir.TabIndex = 5;
@@ -112,9 +112,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pizzeria.Properties.Resources.icnon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(147, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Salir);
