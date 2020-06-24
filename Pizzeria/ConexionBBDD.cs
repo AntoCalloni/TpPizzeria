@@ -11,16 +11,17 @@ namespace Pizzeria
 {
     class ConexionBBDD
     {
-        public static SqlConnection cnn { get; set; }
+        public SqlConnection cnn { get; set; }
         public SqlCommand cmd { get; set; }
         public SqlDataReader dr { get; set; }
-        public static DataSet ds { get; set; }
+        public DataSet ds { get; set; }
 
+        //cnn: llamo a BDD con cmd: llamo para pasarle o crear consulta y dr: une el cnn y el cmd
         public ConexionBBDD()
         {
             try
             {
-                cnn = new SqlConnection("Data Source =DESKTOP-AOA3QAV; Initial Catalog =a; Integrated Security = True");
+                cnn = new SqlConnection("Data Source =ANTO-PC; Initial Catalog =TPPizzeria; Integrated Security = True");
             }
             catch (Exception error)
             {
@@ -28,16 +29,10 @@ namespace Pizzeria
             }
         }
 
-        public static DataTable MostrarDatos()
-        {
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand("select * from Empanadas", cnn);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            cnn.Close();
-            return ds.Tables["tabla"];
-        }
+
+    }
+}
+
         /*
         public DataTable Buscar(string nombre)
         {
@@ -80,8 +75,6 @@ namespace Pizzeria
             else return false;
         }
         */
-    }
-}
 
  /*   class Conexion
     {
@@ -93,8 +86,8 @@ namespace Pizzeria
             {
                 string query = $"Select Nombre, IdUniversidad from Universidad";
                 cnn.Open();
-                cmd = new SqlCommand(query, cnn);
-                dr = cmd.ExecuteReader();
+                cmd = new SqlCommand(query, cnn); 
+                dr = cmd.ExecuteReader(); //recorre todas las tablas con mi consulta
                 cb.DisplayMember = "Text";
                 cb.ValueMember = "Value";
                 var listaUniversidad = new List<dynamic>();

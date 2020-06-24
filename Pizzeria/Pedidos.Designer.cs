@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btn_Volver = new System.Windows.Forms.Button();
+            this.TablaPedidos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -41,17 +43,27 @@
             this.btn_Volver.UseVisualStyleBackColor = true;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
+            // TablaPedidos
+            // 
+            this.TablaPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaPedidos.Location = new System.Drawing.Point(29, 31);
+            this.TablaPedidos.Name = "TablaPedidos";
+            this.TablaPedidos.Size = new System.Drawing.Size(721, 350);
+            this.TablaPedidos.TabIndex = 1;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.TablaPedidos);
             this.Controls.Add(this.btn_Volver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Pedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedidos";
+            ((System.ComponentModel.ISupportInitialize)(this.TablaPedidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -59,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Volver;
+        private System.Windows.Forms.DataGridView TablaPedidos;
     }
 }
