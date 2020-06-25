@@ -16,6 +16,17 @@ namespace Pizzeria
         public Pedidos()
         {
             InitializeComponent();
+            var conexion = new ConexionBBDD();
+            string consulta = "select idPedido 'ID', CantidadPizza, CantidadEmpanada, idPizza1, idEmpanada1, total 'Total', estado 'Estado' from Pedidos";
+
+            conexion.cnn.Open();
+            SqlDataAdapter Adaptador = new SqlDataAdapter(consulta, conexion.cnn);
+            DataSet DS = new DataSet();
+            var commandBuilder = new SqlCommandBuilder(Adaptador);
+            var ds = new DataSet();
+            Adaptador.Fill(ds);
+            TablaPedidos.ReadOnly = true;
+            TablaPedidos.DataSource = ds.Tables[0];
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace Pizzeria
         {
             try
             {
-                cnn = new SqlConnection("Data Source =ANTO-PC; Initial Catalog =TPPizzeria; Integrated Security = True");
+                cnn = new SqlConnection("Data Source =.; Initial Catalog =TPPizzeria; Integrated Security = True");
             }
             catch (Exception error)
             {
@@ -29,73 +29,22 @@ namespace Pizzeria
             }
         }
 
-
-    }
-}
-
-        /*
-        public DataTable Buscar(string nombre)
-        {
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from Negocio where Nombre like '%{0}%'", nombre), cnn);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            cnn.Close();
-            return ds.Tables["tabla"];
-        }
-
-        public bool Insertar(string id, string nombre, string precio)
-        {
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("insert into Negocio values ({0}, '{1}', '{2}')", new string[] { id, nombre, precio }), cnn);
-            int filasafectadas = cmd.ExecuteNonQuery();
-            cnn.Close();
-            if (filasafectadas > 0) return true;
-            else return false;
-        }
-
-        public bool Eliminar(string id)
-        {
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("delete from Negocio where ID = {0}", id), cnn);
-            int filasafectadas = cmd.ExecuteNonQuery();
-            cnn.Close();
-            if (filasafectadas > 0) return true;
-            else return false;
-        }
-
-        public bool Actualizar(string id, string nombre, string precio)
-        {
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("update Negocio set Nombre = '{0}', Precio = '{1}' where ID = {2}", new string[] { nombre, precio, id }), cnn);
-            int filasafectadas = cmd.ExecuteNonQuery();
-            cnn.Close();
-            if (filasafectadas > 0) return true;
-            else return false;
-        }
-        */
-
- /*   class Conexion
-    {
-        
-
-        public void CargarComboUniversidad(ComboBox cb)
+        public void CargarComboNombreE(ComboBox cb)
         {
             try
             {
-                string query = $"Select Nombre, IdUniversidad from Universidad";
+                string query = $"Select NombreEmpanada, idEmpanada from Empanadas";
                 cnn.Open();
-                cmd = new SqlCommand(query, cnn); 
+                cmd = new SqlCommand(query, cnn);
                 dr = cmd.ExecuteReader(); //recorre todas las tablas con mi consulta
                 cb.DisplayMember = "Text";
                 cb.ValueMember = "Value";
-                var listaUniversidad = new List<dynamic>();
+                var listaNombreE = new List<dynamic>();
                 while (dr.Read())
                 {
-                    listaUniversidad.Add(new { Text = dr["Nombre"].ToString(), Value = dr["IdUniversidad"].ToString() });
+                    listaNombreE.Add(new { Text = dr["NombreEmpanada"].ToString(), Value = dr["IdEmpanada"].ToString() });
                 }
-                cb.DataSource = listaUniversidad;
+                cb.DataSource = listaNombreE;
                 cb.SelectedIndex = -1;
                 dr.Close();
                 cnn.Close();
@@ -107,7 +56,7 @@ namespace Pizzeria
             }
         }
 
-
+        /*
         public void AgregarCliente(int dni, string nombre, string telefono, int SocioCoop)
         {
             try
@@ -323,7 +272,51 @@ namespace Pizzeria
             {
                 MessageBox.Show("No se se actualizó el estaod: " + error.ToString());
             }
-        }
+        }*/
 
     }
+}
+
+
+/*
+public DataTable Buscar(string nombre)
+{
+    cnn.Open();
+    SqlCommand cmd = new SqlCommand(string.Format("select * from Negocio where Nombre like '%{0}%'", nombre), cnn);
+    SqlDataAdapter ad = new SqlDataAdapter(cmd);
+    ds = new DataSet();
+    ad.Fill(ds, "tabla");
+    cnn.Close();
+    return ds.Tables["tabla"];
+}
+
+public bool Insertar(string id, string nombre, string precio)
+{
+    cnn.Open();
+    SqlCommand cmd = new SqlCommand(string.Format("insert into Negocio values ({0}, '{1}', '{2}')", new string[] { id, nombre, precio }), cnn);
+    int filasafectadas = cmd.ExecuteNonQuery();
+    cnn.Close();
+    if (filasafectadas > 0) return true;
+    else return false;
+}
+
+public bool Eliminar(string id)
+{
+    cnn.Open();
+    SqlCommand cmd = new SqlCommand(string.Format("delete from Negocio where ID = {0}", id), cnn);
+    int filasafectadas = cmd.ExecuteNonQuery();
+    cnn.Close();
+    if (filasafectadas > 0) return true;
+    else return false;
+}
+
+public bool Actualizar(string id, string nombre, string precio)
+{
+    cnn.Open();
+    SqlCommand cmd = new SqlCommand(string.Format("update Negocio set Nombre = '{0}', Precio = '{1}' where ID = {2}", new string[] { nombre, precio, id }), cnn);
+    int filasafectadas = cmd.ExecuteNonQuery();
+    cnn.Close();
+    if (filasafectadas > 0) return true;
+    else return false;
+}
 */

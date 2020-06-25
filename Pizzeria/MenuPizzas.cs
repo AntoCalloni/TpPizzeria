@@ -16,64 +16,22 @@ namespace Pizzeria
         public MenuPizzas()
         {
             InitializeComponent();
+            var conexion = new ConexionBBDD();
+            string consulta = "select idPizza 'ID', NombrePizza, PrecioPizza 'Precio' from Pizzas";
+
+            conexion.cnn.Open();
+            SqlDataAdapter Adaptador = new SqlDataAdapter(consulta, conexion.cnn);
+            DataSet DS = new DataSet();
+            var commandBuilder = new SqlCommandBuilder(Adaptador);
+            var ds = new DataSet();
+            Adaptador.Fill(ds);
+            TablaPizzas.ReadOnly = true;
+            TablaPizzas.DataSource = ds.Tables[0];
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
-        private void TablaPizzas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var conexion = new ConexionBBDD();
-            string consulta = "select * from Pizzas";
-            /*string consulta = $"select IdCliente 'DNI', Nombre 'Nombre', Telefono 'Telefono', " +
-               $"case when SocioDeCoop = 1 then 'SI' else 'NO'end 'Socio de Cooperadora'" +
-               $"from Cliente ";
-            if (checkBoxId.Checked || checkBoxNombre.Checked || checkBoxTelefono.Checked || checkBoxSocioDeCoop.Checked)
-            {
-                consulta = consulta + $"where ";
-                if (checkBoxId.Checked)
-                {
-                    consulta = consulta + $" IdCliente = {textBoxId.Text} ";
-                }
-                if (checkBoxNombre.Checked)
-                {
-                    consulta = consulta + $"AND Nombre = '{textBoxNombre.Text}' ";
-                }
-                if (checkBoxTelefono.Checked)
-                {
-                    consulta = consulta + $"AND Telefono = '{textBoxTelefono.Text}' ";
-                }
-                if (checkBoxSocioDeCoop.Checked)
-                {
-                    var Socio= int.Parse(comboBoxSocio.SelectedItem.GetType()
-                .GetProperty("Value").GetValue(comboBoxSocio.SelectedItem, null).ToString());
-                    consulta = consulta + $"AND SocioDeCoop = {Socio}";
-                }
-                consulta= consulta.Replace("where AND", "where");
-
-            }*/
-            conexion.cnn.Open(); //Conexion a BDD
-            SqlDataAdapter Adaptador = new SqlDataAdapter(consulta, conexion.cnn); //
-            DataSet DS = new DataSet(); 
-            var commandBuilder = new SqlCommandBuilder(Adaptador);
-            var ds = new DataSet(); 
-            Adaptador.Fill(ds); 
-            TablaPizzas.ReadOnly = true;  //Para que tabla no esté vacía
-            TablaPizzas.DataSource = ds.Tables[0]; 
-            
-        /*    public static DataTable MostrarDatos()
-        {
-            cnn.Open(); 
-            SqlCommand cmd = new SqlCommand("select * from Empanadas", cnn);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            cnn.Close();
-            return ds.Tables["tabla"];
-        }*/
         }
     }
 }

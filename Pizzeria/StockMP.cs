@@ -16,6 +16,19 @@ namespace Pizzeria
         public StockMP()
         {
             InitializeComponent();
+
+            var conexion = new ConexionBBDD();
+            string consulta = "select idMP 'ID', NombreMP, StockDisponible, NombreProveedor from MateriaPrima " +
+            $"inner join Proveedores on idProveedor1 = idProveedor group by idMP, nombreMP, StockDisponible, NombreProveedor";
+
+            conexion.cnn.Open();
+            SqlDataAdapter Adaptador = new SqlDataAdapter(consulta, conexion.cnn);
+            DataSet DS = new DataSet();
+            var commandBuilder = new SqlCommandBuilder(Adaptador);
+            var ds = new DataSet();
+            Adaptador.Fill(ds);
+            TablaStock.ReadOnly = true;
+            TablaStock.DataSource = ds.Tables[0];
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)
@@ -23,11 +36,11 @@ namespace Pizzeria
             this.Close();
         }
 
-         private void TablaStock_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+       /*  private void TablaStock_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             var conexion = new ConexionBBDD();
             string consulta = "select * from Stock";
-            /*string consulta = $"select IdCliente 'DNI', Nombre 'Nombre', Telefono 'Telefono', " +
+            string consulta = $"select IdCliente 'DNI', Nombre 'Nombre', Telefono 'Telefono', " +
                $"case when SocioDeCoop = 1 then 'SI' else 'NO'end 'Socio de Cooperadora'" +
                $"from Cliente ";
             if (checkBoxId.Checked || checkBoxNombre.Checked || checkBoxTelefono.Checked || checkBoxSocioDeCoop.Checked)
@@ -53,7 +66,7 @@ namespace Pizzeria
                 }
                 consulta= consulta.Replace("where AND", "where");
 
-            }*/
+            }
             conexion.cnn.Open(); //Conexion a BDD
             SqlDataAdapter Adaptador = new SqlDataAdapter(consulta, conexion.cnn); //
             DataSet DS = new DataSet(); 
@@ -63,7 +76,7 @@ namespace Pizzeria
             TablaStock.ReadOnly = true;  //Para que tabla no esté vacía
             TablaStock.DataSource = ds.Tables[0]; 
             
-        /*    public static DataTable MostrarDatos()
+            public static DataTable MostrarDatos()
         {
             cnn.Open(); 
             SqlCommand cmd = new SqlCommand("select * from Empanadas", cnn);
@@ -73,6 +86,6 @@ namespace Pizzeria
             cnn.Close();
             return ds.Tables["tabla"];
         }*/
-        }
+        
     }
 }
