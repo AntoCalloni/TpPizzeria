@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pizzeria
+namespace Pizzeria //Pixxas
 {
     public partial class MenuPizzas : Form
     {
